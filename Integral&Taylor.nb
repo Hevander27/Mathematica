@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      6528,        163]
+NotebookOptionsPosition[      6107,        147]
+NotebookOutlinePosition[      6449,        162]
+CellTagsIndexPosition[      6406,        159]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"expansion", " ", "=", " ", 
+     RowBox[{"Normal", "[", "\[IndentingNewLine]", 
+      RowBox[{"Series", "[", "\[IndentingNewLine]", 
+       RowBox[{"func", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", " ", "a", ",", " ", "n"}], "}"}]}], "]"}], "]"}]}],
+     ";", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"func", ",", " ", "expansion"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", " ", 
+          RowBox[{
+           RowBox[{"-", "2"}], "Pi"}], ",", " ", 
+          RowBox[{"2", "Pi"}]}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], "Pi"}], ",", 
+             RowBox[{"2", "Pi"}]}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"yMin", ",", " ", "yMax"}], "}"}]}], "}"}]}]}], "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"Expand", "[", "expansion", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"n", " ", "\"\<degree polynomial around the point x= \>\""}], 
+      ",", "\[IndentingNewLine]", "a"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", "3"}], "}"}], ",", " ", "1", ",", " ", "25", ",",
+      " ", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"func", ",", 
+      RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+      "\"\<Function in terms of x\>\""}], "}"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "0"}], "}"}], ",", " ", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"yMin", ",", " ", 
+     RowBox[{"-", "6"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"yMax", ",", "6"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.78770696098396*^9, 3.7877073408194056`*^9}, {
+  3.7877073801454983`*^9, 3.787707405850457*^9}, {3.7877074368313265`*^9, 
+  3.7877074419607725`*^9}, {3.787707531141054*^9, 3.787707534278613*^9}, {
+  3.78770773647764*^9, 3.787707740610591*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"8b294dcc-c35a-4f79-a13f-dc118ffdf5b5"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 
+    3.328545570373535, $CellContext`func$$ = $CellContext`x 
+    Sin[$CellContext`x], $CellContext`n$$ = 13, $CellContext`yMax$$ = 
+    6, $CellContext`yMin$$ = -6, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 3}, 1, 25, 1}, {{
+       Hold[$CellContext`func$$], 
+       Sin[$CellContext`x], "Function in terms of x"}}, {{
+       Hold[$CellContext`a$$], 0}, -5, 5}, {
+      Hold[$CellContext`yMin$$], -6}, {
+      Hold[$CellContext`yMax$$], 6}}, Typeset`size$$ = {584., {138., 64.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$20095$$ = 0, $CellContext`a$20096$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 0, $CellContext`func$$ = 
+        Sin[$CellContext`x], $CellContext`n$$ = 3, $CellContext`yMax$$ = 
+        6, $CellContext`yMin$$ = -6}, "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$20095$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$20096$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ($CellContext`expansion = Normal[
+          
+          Series[$CellContext`func$$, {$CellContext`x, $CellContext`a$$, \
+$CellContext`n$$}]]; {
+         Plot[{$CellContext`func$$, $CellContext`expansion}, {$CellContext`x, \
+(-2) Pi, 2 Pi}, 
+          PlotRange -> {{(-2) Pi, 2 
+             Pi}, {$CellContext`yMin$$, $CellContext`yMax$$}}], 
+         Expand[$CellContext`expansion], $CellContext`n$$ 
+         "degree polynomial around the point x= ", $CellContext`a$$}), 
+      "Specifications" :> {{{$CellContext`n$$, 3}, 1, 25, 
+         1}, {{$CellContext`func$$, 
+          Sin[$CellContext`x], "Function in terms of x"}}, {{$CellContext`a$$,
+           0}, -5, 5}, {$CellContext`yMin$$, -6}, {$CellContext`yMax$$, 6}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{635., {204., 210.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7877074096593814`*^9, 3.78770744592708*^9, 3.7877075363578777`*^9, {
+   3.7877076063643675`*^9, 3.7877076594708405`*^9}, 3.78770774293238*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"ae13b381-bd03-43fa-a100-23bdc60bd5a5"]
+}, Open  ]]
+},
+WindowSize->{766, 772},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 2494, 62, 295, "Input",ExpressionUUID->"8b294dcc-c35a-4f79-a13f-dc118ffdf5b5"],
+Cell[3080, 86, 3011, 58, 466, "Output",ExpressionUUID->"ae13b381-bd03-43fa-a100-23bdc60bd5a5"]
+}, Open  ]]
+}
+]
+*)
+

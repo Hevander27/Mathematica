@@ -1,0 +1,473 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17022,        465]
+NotebookOptionsPosition[     16340,        437]
+NotebookOutlinePosition[     16698,        453]
+CellTagsIndexPosition[     16655,        450]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\"\<dataIn\>\"", " ", "is", " ", "the", " ", "table", " ", "of", " ", 
+    "experimental", " ", "data", " ", "from", " ", "the", " ", "lab"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"dataIn", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "Diameter", ",", "Current", ",", "Voltage", ",", " ", "B_field"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"10.5", " ", "cm"}], ",", " ", 
+         RowBox[{"1.54", " ", "amp"}], ",", " ", 
+         RowBox[{"375", " ", "V"}], ",", " ", 
+         RowBox[{"0.00117", " ", "T"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"5.5", " ", "cm"}], ",", " ", 
+         RowBox[{"2.88", " ", "amp"}], ",", " ", 
+         RowBox[{"373", " ", "V"}], ",", " ", 
+         RowBox[{"0.00220", " ", "T"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"11", "cm"}], ",", " ", 
+         RowBox[{"1.59", " ", "amps"}], ",", " ", 
+         RowBox[{"440", " ", "V"}], ",", " ", 
+         RowBox[{"0.00121", "T"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"5", "cm"}], ",", 
+         RowBox[{"3.39", "amp"}], ",", 
+         RowBox[{"440", "V"}], ",", 
+         RowBox[{"0.00266", "T"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"8", "cm"}], ",", 
+         RowBox[{"2.18", "amp"}], ",", 
+         RowBox[{"442", " ", "V"}], ",", " ", 
+         RowBox[{"0.00166", "T"}]}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Grid", "[", 
+    RowBox[{"dataIn", ",", " ", 
+     RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "1"}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.702342373238864*^9, 3.702342387099841*^9}, {
+  3.702342424938414*^9, 3.702342425218293*^9}, {3.702342505636622*^9, 
+  3.702342585760808*^9}, {3.702342638859014*^9, 3.702342643211584*^9}, {
+  3.702342710201263*^9, 3.702342764125844*^9}, {3.702342811983715*^9, 
+  3.702342838839858*^9}, {3.702343424613318*^9, 3.70234347475742*^9}, {
+  3.702378545322978*^9, 3.70237859051931*^9}, {3.702378664701873*^9, 
+  3.702379161954729*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"Diameter", "Current", "Voltage", "B_field"},
+    {
+     RowBox[{"10.5`", " ", "cm"}], 
+     RowBox[{"1.54`", " ", "amp"}], 
+     RowBox[{"375", " ", "V"}], 
+     RowBox[{"0.00117`", " ", "T"}]},
+    {
+     RowBox[{"5.5`", " ", "cm"}], 
+     RowBox[{"2.88`", " ", "amp"}], 
+     RowBox[{"373", " ", "V"}], 
+     RowBox[{"0.0022`", " ", "T"}]},
+    {
+     RowBox[{"11", " ", "cm"}], 
+     RowBox[{"1.59`", " ", "amps"}], 
+     RowBox[{"440", " ", "V"}], 
+     RowBox[{"0.00121`", " ", "T"}]},
+    {
+     RowBox[{"5", " ", "cm"}], 
+     RowBox[{"3.39`", " ", "amp"}], 
+     RowBox[{"440", " ", "V"}], 
+     RowBox[{"0.00266`", " ", "T"}]},
+    {
+     RowBox[{"8", " ", "cm"}], 
+     RowBox[{"2.18`", " ", "amp"}], 
+     RowBox[{"442", " ", "V"}], 
+     RowBox[{"0.00166`", " ", "T"}]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.702379034526449*^9, 3.7023790730805483`*^9, {3.702379118296749*^9, 
+   3.702379122001005*^9}, 3.702379165038417*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"data", " ", "set", " ", "for", " ", "lab", " ", "6"}], ";", " ", 
+    
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}], "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"tesla", ",", " ", "diameter"}], "}"}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"dataTD", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.00117", ",", " ", "0.105"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.00121", ",", " ", "0.11"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.00166", ",", "0.08"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.00220", ",", " ", "0.055"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.00266", ",", "0.05"}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"data", " ", "set", " ", "for", " ", "lab", " ", "6"}], ";", 
+      " ", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], "=", " ", 
+       RowBox[{"{", 
+        RowBox[{"voltage", ",", " ", "amps"}], "}"}]}]}], ",", " ", 
+     RowBox[{
+     "this", " ", "data", " ", "sets", " ", "correspond", " ", "to", " ", 
+      "the", " ", 
+      RowBox[{"{", 
+       RowBox[{"tesla", ",", "diameter"}], "}"}], " ", "points", " ", "in", 
+      " ", "\"\<dataTD\>\""}]}], "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.702343318370673*^9, 3.7023433377831697`*^9}, 
+   3.7023433937730827`*^9, {3.702343645121357*^9, 3.7023436932069597`*^9}, {
+   3.702379050686936*^9, 3.70237906456703*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dataVA", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"375", ",", "1.54"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"440", ",", "1.59"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"442", ",", "2.18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"373", ",", "2.88"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"440", ",", "3.49"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7023428486507587`*^9, 3.702342849061201*^9}, {
+  3.70234297600874*^9, 3.7023429975544863`*^9}, {3.702343060192738*^9, 
+  3.702343081347639*^9}, {3.702343233793912*^9, 3.702343308559805*^9}, {
+  3.702343527348317*^9, 3.702343593774309*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Needs", "[", "\"\<ErrorBarPlots`\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.702343828645424*^9, 3.7023438492986193`*^9}, 
+   3.702378107989256*^9, {3.702378145131774*^9, 3.702378159677351*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"dataTD", " ", "error", " ", "list", " ", "plot"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"ErrorListPlot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.00117", ",", " ", "0.105"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.002", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.00121", ",", " ", "0.11"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.002", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.00166", ",", "0.08"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.002", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.00220", ",", " ", "0.055"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.002", "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.00266", ",", "0.05"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.002", "]"}]}], "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Diameter(D)\>\"", ",", " ", "\"\<Tesla (T)\>\""}], "}"}]}],
+     ",", 
+    RowBox[{"PlotRange", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.0010", ",", "0.003"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"0.0", ",", "0.15"}], "}"}]}], "}"}]}], ",", " ", 
+    RowBox[{"Joined", " ", "\[Rule]", " ", "True"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7023438569843884`*^9, 3.70234405890027*^9}, {
+   3.702344104037801*^9, 3.70234426162609*^9}, 3.7023442991436357`*^9, {
+   3.702344451679393*^9, 3.702344501798215*^9}, {3.702378085645296*^9, 
+   3.702378086138834*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{0.00117, 0.105}, {0.00121, 0.11}, {0.00166, 0.08}, {0.0022, 
+      0.055}, {0.00266, 
+      0.05}}], {{LineBox[{{0.00117, 0.107}, {0.00117, 0.103}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00117, 0.107}], 
+         Offset[{-1.5, 0}, {0.00117, 0.107}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00117, 0.103}], 
+         Offset[{-1.5, 0}, {0.00117, 0.103}]}]}, {
+       LineBox[{{0.00121, 0.112}, {0.00121, 0.108}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00121, 0.112}], 
+         Offset[{-1.5, 0}, {0.00121, 0.112}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00121, 0.108}], 
+         Offset[{-1.5, 0}, {0.00121, 0.108}]}]}, {
+       LineBox[{{0.00166, 0.082}, {0.00166, 0.078}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00166, 0.082}], 
+         Offset[{-1.5, 0}, {0.00166, 0.082}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00166, 0.078}], 
+         Offset[{-1.5, 0}, {0.00166, 0.078}]}]}, {
+       LineBox[{{0.0022, 0.057}, {0.0022, 0.053}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.0022, 0.057}], 
+         Offset[{-1.5, 0}, {0.0022, 0.057}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.0022, 0.053}], 
+         Offset[{-1.5, 0}, {0.0022, 0.053}]}]}, {
+       LineBox[{{0.00266, 0.052000000000000005`}, {0.00266, 0.048}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00266, 0.052000000000000005`}], 
+         Offset[{-1.5, 0}, {0.00266, 0.052000000000000005`}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {0.00266, 0.048}], 
+         Offset[{-1.5, 0}, {0.00266, 0.048}]}]}}}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0.00101, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"Tesla (T)\"", TraditionalForm], None}, {
+     FormBox["\"Diameter(D)\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0.001, 0.003}, {0., 0.15}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.702378164703713*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"ErrorListPlot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"375", ",", "1.54"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.05", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"440", ",", "1.59"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.05", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"442", ",", "2.18"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.05", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"373", ",", "2.88"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.05", "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"440", ",", "3.49"}], "}"}], ",", 
+        RowBox[{"ErrorBar", "[", "0.05", "]"}]}], "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Voltage(V)\>\"", ",", " ", "\"\<Current(I)\>\""}], "}"}]}],
+     ",", 
+    RowBox[{"PlotRange", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"370", ",", "445"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"1.40", ",", "3.60"}], "}"}]}], "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.702377854887887*^9, 3.7023780491762114`*^9}, {
+  3.7023781788517*^9, 3.702378233744913*^9}, {3.702378285846264*^9, 
+  3.7023782916046543`*^9}, {3.702378330414962*^9, 3.702378377924492*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     PointBox[{{375., 1.54}, {440., 1.59}, {442., 2.18}, {373., 2.88}, {440., 
+      3.49}}], {{LineBox[{{375., 1.59}, {375., 1.49}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {375., 1.59}], Offset[{-1.5, 0}, {375., 1.59}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {375., 1.49}], Offset[{-1.5, 0}, {375., 1.49}]}]}, {
+       LineBox[{{440., 1.6400000000000001`}, {440., 1.54}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {440., 1.6400000000000001`}], 
+         Offset[{-1.5, 0}, {440., 1.6400000000000001`}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {440., 1.54}], Offset[{-1.5, 0}, {440., 1.54}]}]}, {
+       LineBox[{{442., 2.23}, {442., 2.1300000000000003`}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {442., 2.23}], Offset[{-1.5, 0}, {442., 2.23}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {442., 2.1300000000000003`}], 
+         Offset[{-1.5, 0}, {442., 2.1300000000000003`}]}]}, {
+       LineBox[{{373., 2.9299999999999997`}, {373., 2.83}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {373., 2.9299999999999997`}], 
+         Offset[{-1.5, 0}, {373., 2.9299999999999997`}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {373., 2.83}], Offset[{-1.5, 0}, {373., 2.83}]}]}, {
+       LineBox[{{440., 3.54}, {440., 3.4400000000000004`}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {440., 3.54}], Offset[{-1.5, 0}, {440., 3.54}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {440., 3.4400000000000004`}], 
+         Offset[{-1.5, 0}, {440., 
+          3.4400000000000004`}]}]}}}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{370.375, 1.4109999999999998`},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"Current(I)\"", TraditionalForm], None}, {
+     FormBox["\"Voltage(V)\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{370, 445}, {1.4, 3.6}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.7023782078204327`*^9, 3.702378236246565*^9}, {
+   3.70237831851048*^9, 3.7023783446205397`*^9}, 3.702378380154127*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 590},
+WindowMargins->{{Automatic, 3}, {-1, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2382, 60, 180, "Input"],
+Cell[2965, 84, 1191, 36, 161, "Output"]
+}, Open  ]],
+Cell[4171, 123, 1680, 46, 159, "Input"],
+Cell[5854, 171, 708, 18, 32, "Input"],
+Cell[6565, 191, 255, 4, 54, "Input"],
+Cell[CellGroupData[{
+Cell[6845, 199, 1900, 50, 138, "Input"],
+Cell[8748, 251, 2903, 68, 238, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11688, 324, 1670, 45, 117, "Input"],
+Cell[13361, 371, 2963, 63, 251, "Output"]
+}, Open  ]]
+}
+]
+*)
+

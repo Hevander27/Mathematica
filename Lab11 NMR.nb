@@ -1,0 +1,391 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14557,        383]
+NotebookOptionsPosition[     13728,        351]
+NotebookOutlinePosition[     14088,        367]
+CellTagsIndexPosition[     14045,        364]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "data", " ", "set", " ", "is", " ", "representative", " ", 
+     "of", " ", "the", " ", "relationship", "\[IndentingNewLine]", " ", 
+     "between", " ", "magnetic", " ", "field", " ", "and", " ", "angular", 
+     " ", "frequency"}], ";", " ", 
+    RowBox[{"experimental", " ", "data"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"dataNMR", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3078.32", ",", 
+       RowBox[{"26100", "*", 
+        RowBox[{"(", "Pi", ")"}], "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3137.32", ",", 
+       RowBox[{"26600", "*", 
+        RowBox[{"(", "Pi", ")"}], "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3173.52", ",", 
+       RowBox[{"26900", "*", 
+        RowBox[{"(", "Pi", ")"}], "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3201.82", ",", 
+       RowBox[{"27200", "*", 
+        RowBox[{"(", "Pi", ")"}], "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", "3", ")"}]}]}]}], "}"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.701176275576055*^9, 3.701176374759577*^9}, {
+   3.701176884231386*^9, 3.701176892365162*^9}, {3.701177165463648*^9, 
+   3.7011771946932077`*^9}, {3.701177240589143*^9, 3.701177246077248*^9}, {
+   3.7011773432590847`*^9, 3.7011773768583813`*^9}, {3.701177417728765*^9, 
+   3.701177441032769*^9}, {3.701177507205988*^9, 3.701177560294346*^9}, 
+   3.701177618959103*^9, {3.701177669022434*^9, 3.701177695426784*^9}, {
+   3.70117774660989*^9, 3.701177790969833*^9}, {3.701178942698151*^9, 
+   3.701178952560069*^9}, {3.7011790279602633`*^9, 3.701179078686726*^9}, 
+   3.701603562680913*^9, 3.701603595102364*^9, {3.701605619716978*^9, 
+   3.701605629021887*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3078.32`", ",", 
+     RowBox[{"26100000", " ", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3137.32`", ",", 
+     RowBox[{"26600000", " ", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3173.52`", ",", 
+     RowBox[{"26900000", " ", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3201.82`", ",", 
+     RowBox[{"27200000", " ", "\[Pi]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.701177816787829*^9, 3.701179081227584*^9, 
+  3.701603563956161*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "These", " ", "are", " ", "the", " ", "points", " ", "plotted", " ", "for",
+     " ", "data", " ", "set", " ", "\"\<dataNMR\>\""}], ";", " ", 
+   RowBox[{
+   "ranges", " ", "are", " ", "set", " ", "lower", " ", "that", " ", "the", 
+    " ", "lowest", " ", "experimental", " ", "value", " ", "and", " ", 
+    "higher", " ", "than", " ", "the", " ", "highest", " ", "experimental", 
+    " ", "value"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.701177810424671*^9, 3.7011778142889967`*^9}, {
+  3.701605482123076*^9, 3.7016056040860863`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"dataNMR", ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"3050", ",", "3210`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"26000", "*", 
+         RowBox[{"(", "Pi", ")"}], "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", "3", ")"}]}]}], ",", 
+        RowBox[{"27300", "*", 
+         RowBox[{"(", "Pi", ")"}], "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", "3", ")"}]}]}]}], "}"}]}], "}"}]}], ",", " ", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Magnetic Field \>\"", ",", "\"\<Angular Frequency\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.701178293141877*^9, 3.701178293408124*^9}, {
+  3.701178326646038*^9, 3.701178410028734*^9}, {3.7011784723001966`*^9, 
+  3.701178517557349*^9}, {3.701178605347534*^9, 3.701178608047221*^9}, {
+  3.701178693967524*^9, 3.7011786993972273`*^9}, {3.701179105605538*^9, 
+  3.701179110835815*^9}, {3.7011793412159567`*^9, 3.701179342984111*^9}, {
+  3.7016016149531612`*^9, 3.701601618264145*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     PointBox[{{3078.32, 8.19955682586936*^7}, {3137.32, 
+      8.35663645854885*^7}, {3173.52, 8.450884238156544*^7}, {3201.82, 
+      8.545132017764238*^7}}]}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{3050.8, 8.170182934558296*^7},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"Angular Frequency\"", TraditionalForm], None}, {
+     FormBox["\"Magnetic Field \"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->
+   NCache[{{3050, 3210.}, {26000000 Pi, 27300000 Pi}}, {{3050, 3210.}, {
+     8.168140899333462*^7, 8.576547944300134*^7}}],
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.701178507813921*^9, 3.701178646405665*^9, 3.701178702996711*^9, {
+   3.701179084958953*^9, 3.701179113669073*^9}, 3.70117934511907*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Needs", "[", "\"\<ErrorBarPlots\>\"", "]"}], " ", "is", " ", 
+    "used", " ", "to", " ", "bring", " ", "in", " ", "the", " ", "error", " ",
+     "bars", " ", "package"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.7016010109815063`*^9, 3.7016010508265133`*^9}, {
+  3.7016011665768747`*^9, 3.701601172903287*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.701601054420907*^9, 3.701601065210409*^9}, {
+   3.7016011089000387`*^9, 3.701601123239962*^9}, {3.7016011825756693`*^9, 
+   3.701601197688545*^9}, {3.70160216053454*^9, 3.701602168316279*^9}, 
+   3.701603546618195*^9}],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<ErrorBarPlots`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.701603608996766*^9, 3.7016036167701273`*^9}, {
+  3.701605038597253*^9, 3.701605051330985*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ErrorListPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3078.32", ",", 
+         RowBox[{"26100", "*", 
+          RowBox[{"(", "Pi", ")"}], "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", " ", 
+       RowBox[{"ErrorBar", "[", "0.2", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3137.32", ",", 
+         RowBox[{"26600", "*", 
+          RowBox[{"(", "Pi", ")"}], "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+       RowBox[{"ErrorBar", "[", "0.2", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3173.52", ",", 
+         RowBox[{"26900", "*", 
+          RowBox[{"(", "Pi", ")"}], "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+       RowBox[{"ErrorBar", "[", "0.2", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3201.82", ",", 
+         RowBox[{"27200", "*", 
+          RowBox[{"(", "Pi", ")"}], "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", "3", ")"}]}]}]}], "}"}], ",", 
+       RowBox[{"ErrorBar", "[", "0.2", "]"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Magnetic Field\>\"", ",", " ", "\"\<Angular Frequency\>\""}], 
+     "}"}]}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"3050", ",", "3210"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"8.1", "*", 
+         RowBox[{"10", "^", "7"}]}], ",", 
+        RowBox[{"8.6", "*", 
+         RowBox[{"10", "^", "7"}]}]}], "}"}]}], "}"}]}], ",", " ", 
+   RowBox[{"Joined", " ", "\[Rule]", " ", "True"}]}], " ", "]"}]], "Input",
+ CellChangeTimes->{{3.701601247690099*^9, 3.701601299107134*^9}, {
+   3.701601370733404*^9, 3.7016014042372828`*^9}, 3.701601441137437*^9, {
+   3.701601496833606*^9, 3.701601579691959*^9}, {3.701601630680778*^9, 
+   3.7016017538494787`*^9}, {3.7016019192500257`*^9, 3.701601938428261*^9}, {
+   3.701602106750786*^9, 3.701602131147784*^9}, 3.701605012526877*^9, 
+   3.701605127408484*^9, {3.701605269097191*^9, 3.701605298980644*^9}, {
+   3.701605329415827*^9, 3.701605336916421*^9}, {3.702408996038824*^9, 
+   3.7024090419187307`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{3078.32, 8.19955682586936*^7}, {3137.32, 
+      8.35663645854885*^7}, {3173.52, 8.450884238156544*^7}, {3201.82, 
+      8.545132017764238*^7}}], {{
+       LineBox[{{3078.32, 8.199556845869361*^7}, {3078.32, 
+        8.19955680586936*^7}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3078.32, 8.199556845869361*^7}], 
+         Offset[{-1.5, 0}, {3078.32, 8.199556845869361*^7}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3078.32, 8.19955680586936*^7}], 
+         Offset[{-1.5, 0}, {3078.32, 8.19955680586936*^7}]}]}, {
+       LineBox[{{3137.32, 8.35663647854885*^7}, {3137.32, 
+        8.35663643854885*^7}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3137.32, 8.35663647854885*^7}], 
+         Offset[{-1.5, 0}, {3137.32, 8.35663647854885*^7}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3137.32, 8.35663643854885*^7}], 
+         Offset[{-1.5, 0}, {3137.32, 8.35663643854885*^7}]}]}, {
+       LineBox[{{3173.52, 8.450884258156544*^7}, {3173.52, 
+        8.450884218156543*^7}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3173.52, 8.450884258156544*^7}], 
+         Offset[{-1.5, 0}, {3173.52, 8.450884258156544*^7}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3173.52, 8.450884218156543*^7}], 
+         Offset[{-1.5, 0}, {3173.52, 8.450884218156543*^7}]}]}, {
+       LineBox[{{3201.82, 8.545132037764238*^7}, {3201.82, 
+        8.545131997764237*^7}}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3201.82, 8.545132037764238*^7}], 
+         Offset[{-1.5, 0}, {3201.82, 8.545132037764238*^7}]}], 
+       LineBox[{
+        Offset[{1.5, 0}, {3201.82, 8.545131997764237*^7}], 
+         Offset[{-1.5, 0}, {3201.82, 
+          8.545131997764237*^7}]}]}}}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{3050.8, 8.1025*^7},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"Angular Frequency\"", TraditionalForm], None}, {
+     FormBox["\"Magnetic Field\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3050, 3210}, {8.1*^7, 8.6*^7}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.7024088741597137`*^9, {3.702408999581539*^9, 3.70240904386978*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.701601073234335*^9, 3.7016010776936913`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.701600563733034*^9, 3.7016005744153013`*^9}, {
+   3.7016006258131332`*^9, 3.701600628226103*^9}, {3.701600661937851*^9, 
+   3.701600837538035*^9}, 3.701600870920842*^9, {3.701600932392747*^9, 
+   3.701600960775568*^9}, 3.701601103857831*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.701601093691791*^9, 3.701601093700822*^9}}]
+},
+WindowSize->{694, 590},
+WindowMargins->{{Automatic, -57}, {Automatic, 42}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1994, 47, 117, "Input"],
+Cell[2577, 71, 554, 16, 54, "Output"]
+}, Open  ]],
+Cell[3146, 90, 595, 12, 75, "Input"],
+Cell[CellGroupData[{
+Cell[3766, 106, 1183, 28, 75, "Input"],
+Cell[4952, 136, 1761, 38, 235, "Output"]
+}, Open  ]],
+Cell[6728, 177, 401, 8, 75, "Input"],
+Cell[7132, 187, 267, 4, 32, "Input"],
+Cell[7402, 193, 196, 3, 32, "Input"],
+Cell[CellGroupData[{
+Cell[7623, 200, 2497, 66, 138, "Input"],
+Cell[10123, 268, 3104, 68, 243, "Output"]
+}, Open  ]],
+Cell[13242, 339, 94, 1, 32, "Input"],
+Cell[13339, 342, 290, 4, 32, "Input"],
+Cell[13632, 348, 92, 1, 32, "Input"]
+}
+]
+*)
+
