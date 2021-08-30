@@ -1,0 +1,948 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32424,        940]
+NotebookOptionsPosition[     30388,        868]
+NotebookOutlinePosition[     30748,        884]
+CellTagsIndexPosition[     30705,        881]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data2mm", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.93"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3.94", ",", 
+       RowBox[{"85", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7.95", ",", " ", 
+       RowBox[{"124", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"11.91", ",", 
+       RowBox[{"160", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15.94", ",", " ", 
+       RowBox[{"191", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19.94", ",", 
+       RowBox[{"216", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23.94", ",", " ", 
+       RowBox[{"240", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"27.94", ",", " ", 
+       RowBox[{"264", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"30.72", ",", " ", 
+       RowBox[{"273", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "11"}], ")"}]}]}]}], "}"}]}], "}"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696369571551466*^9, 3.696369912815372*^9}, 
+   3.696371634557661*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.93`"}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3.94`", ",", 
+     FractionBox["17", "20000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7.95`", ",", 
+     FractionBox["31", "25000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"11.91`", ",", 
+     FractionBox["1", "625000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15.94`", ",", 
+     FractionBox["191", "100000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"19.94`", ",", 
+     FractionBox["27", "12500000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"23.94`", ",", 
+     FractionBox["3", "1250000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"27.94`", ",", 
+     FractionBox["33", "12500000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"30.72`", ",", 
+     FractionBox["273", "100000000000"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6963716383805323`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"data4mm", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0.76"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2.78", ",", 
+        RowBox[{"23", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"4.74", ",", " ", 
+        RowBox[{"36", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"6.78", ",", " ", 
+        RowBox[{"43", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"8.77", ",", " ", 
+        RowBox[{"50", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"10.78", ",", " ", 
+        RowBox[{"58", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"12.76", ",", " ", 
+        RowBox[{"65", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"14.76", ",", " ", 
+        RowBox[{"70", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"16.77", ",", " ", 
+        RowBox[{"75", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"18.75", ",", " ", 
+        RowBox[{"81", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"22.75", ",", " ", 
+        RowBox[{"92", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"26.74", ",", " ", 
+        RowBox[{"99", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"30.71", ",", " ", 
+        RowBox[{"106", "*", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "10"}], ")"}]}]}]}], "}"}]}], "}"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.696371566659748*^9, 3.696371566669574*^9}, {
+   3.6963716424220057`*^9, 3.696371653863*^9}, 3.696375180242141*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.76`"}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2.78`", ",", 
+     FractionBox["23", "10000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4.74`", ",", 
+     FractionBox["9", "2500000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6.78`", ",", 
+     FractionBox["43", "10000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8.77`", ",", 
+     FractionBox["1", "200000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10.78`", ",", 
+     FractionBox["29", "5000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"12.76`", ",", 
+     FractionBox["13", "2000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14.76`", ",", 
+     FractionBox["7", "1000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"16.77`", ",", 
+     FractionBox["3", "400000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"18.75`", ",", 
+     FractionBox["81", "10000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"22.75`", ",", 
+     FractionBox["23", "2500000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"26.74`", ",", 
+     FractionBox["99", "10000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"30.71`", ",", 
+     FractionBox["53", "5000000000"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.69637165624104*^9, 3.69637519627184*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data8mm", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.88"}], ",", " ", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5.87", ",", " ", 
+       RowBox[{"156", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10.9", ",", " ", 
+       RowBox[{"240", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15.87", ",", " ", 
+       RowBox[{"300", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"20.86", ",", " ", 
+       RowBox[{"354", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"25.89", ",", " ", 
+       RowBox[{"411", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"30.72", ",", " ", 
+       RowBox[{"445", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "10"}], ")"}]}]}]}], "}"}]}], "}"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696369929332739*^9, 3.696370217304439*^9}, {
+  3.6963702774319763`*^9, 3.696370404947568*^9}, {3.6963704389709806`*^9, 
+  3.696370596968542*^9}, {3.6963712921709757`*^9, 3.6963713373045588`*^9}, {
+  3.69637137826782*^9, 3.696371458550802*^9}, {3.696371632067137*^9, 
+  3.696371666553296*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.88`"}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5.87`", ",", 
+     FractionBox["39", "2500000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10.9`", ",", 
+     FractionBox["3", "125000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15.87`", ",", 
+     FractionBox["3", "100000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"20.86`", ",", 
+     FractionBox["177", "5000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"25.89`", ",", 
+     FractionBox["411", "10000000000"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"30.72`", ",", 
+     FractionBox["89", "2000000000"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6963716685734577`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.696371578531405*^9, 3.696371578538639*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data2mm", ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "31", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"280", "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "11"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+     " ", "\[Rule]", "True"}]}], ",", " ", 
+   RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"7\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"2500000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,32,32,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696371677408883*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     PointBox[{{-0.93, 0.}, {3.94, 8.5*^-10}, {7.95, 1.24*^-9}, {11.91, 
+      1.6*^-9}, {15.94, 1.91*^-9}, {19.94, 2.16*^-9}, {23.94, 2.4*^-9}, {
+      27.94, 2.64*^-9}, {30.72, 2.73*^-9}}]}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.93, 30.72}, {0, 2.73*^-9}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.696371677420219*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.696371610075453*^9, 3.6963716105004997`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data2mm", ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "31", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"280", "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "11"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+     " ", "\[Rule]", "True"}]}], ",", " ", 
+   RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}], ",", 
+   " ", 
+   RowBox[{"Joined", " ", "\[Rule]", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.696371536623501*^9, 3.696371536631893*^9}, {
+  3.6963716878691053`*^9, 3.69637170428505*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"7\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"2500000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,33,33,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696371712050313*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{-0.93, 0.}, {3.94, 8.5*^-10}, {7.95, 1.24*^-9}, {11.91, 
+      1.6*^-9}, {15.94, 1.91*^-9}, {19.94, 2.16*^-9}, {23.94, 2.4*^-9}, {
+      27.94, 2.64*^-9}, {30.72, 2.73*^-9}}]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.93, 30.72}, {0, 2.73*^-9}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.6963717120615396`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Fit", "[", 
+  RowBox[{"data2mm", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6963718388319263`*^9, 3.696371853919903*^9}}],
+
+Cell[BoxData[
+ RowBox[{"4.5417278554190736`*^-10", "+", 
+  RowBox[{"8.095114913422589`*^-11", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.6963718576643677`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696371533004458*^9, 3.6963715330114517`*^9}, {
+  3.696372205130769*^9, 3.6963722057856216`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data4mm", ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "31", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"110", "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "10"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+     " ", "\[Rule]", "True"}]}], ",", " ", 
+   RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6963719005203114`*^9, 3.696371905056416*^9}, {
+  3.696371956247089*^9, 3.696371959286562*^9}, {3.696372009910556*^9, 
+  3.696372011573744*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"11\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"1000000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,51,44,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696375206030765*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     PointBox[{{-0.76, 0.}, {2.78, 2.3*^-9}, {4.74, 3.6*^-9}, {6.78, 
+      4.3*^-9}, {8.77, 5.*^-9}, {10.78, 5.8*^-9}, {12.76, 6.5*^-9}, {14.76, 
+      7.*^-9}, {16.77, 7.5*^-9}, {18.75, 8.1*^-9}, {22.75, 9.2*^-9}, {26.74, 
+      9.9*^-9}, {30.71, 1.06*^-8}}]}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.76, 30.71}, {0, 1.06*^-8}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.696372027593692*^9, 3.696375206039775*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data4mm", ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "31", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"110", "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "10"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+     " ", "\[Rule]", "True"}]}], ",", " ", 
+   RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}], ",", 
+   " ", 
+   RowBox[{"Joined", " ", "\[Rule]", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.696372016676632*^9, 3.696372016688097*^9}, {
+  3.6963720969193077`*^9, 3.696372115579509*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"11\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"1000000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,52,45,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696375210792552*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{-0.76, 0.}, {2.78, 2.3*^-9}, {4.74, 3.6*^-9}, {6.78, 
+      4.3*^-9}, {8.77, 5.*^-9}, {10.78, 5.8*^-9}, {12.76, 6.5*^-9}, {14.76, 
+      7.*^-9}, {16.77, 7.5*^-9}, {18.75, 8.1*^-9}, {22.75, 9.2*^-9}, {26.74, 
+      9.9*^-9}, {30.71, 1.06*^-8}}]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.76, 30.71}, {0, 1.06*^-8}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.696372118523802*^9, 3.696375210801375*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Fit", "[", 
+  RowBox[{"data4mm", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.696371525221819*^9, 3.696371525229495*^9}, {
+  3.696372134682082*^9, 3.6963721368907433`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1.3740233899203758`*^-9", "+", 
+  RowBox[{"3.3952076181611247`*^-10", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.6963721401553097`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"ListPlot", "[", 
+   RowBox[{"data8mm", ",", " ", 
+    RowBox[{"PlotRange", " ", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "31", "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"450", "*", 
+           RowBox[{"10", "^", 
+            RowBox[{"(", 
+             RowBox[{"-", "10"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+      " ", "\[Rule]", "True"}]}], ",", " ", 
+    RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.696372256242175*^9, 3.696372272497389*^9}, {
+  3.696372304330365*^9, 3.696372304639827*^9}, {3.6963723559303703`*^9, 
+  3.6963723598380623`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"9\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"200000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,41,39,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696372378955303*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     PointBox[{{-0.88, 0.}, {5.87, 1.56*^-8}, {10.9, 2.4*^-8}, {15.87, 
+      3.*^-8}, {20.86, 3.54*^-8}, {25.89, 4.11*^-8}, {30.72, 
+      4.45*^-8}}]}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.88, 30.72}, {0, 4.45*^-8}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.6963723789692802`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data8mm", ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "31", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"450", "*", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "10"}], ")"}]}]}], "}"}]}], "}"}], " ", "Frame"}], 
+     " ", "\[Rule]", "True"}]}], ",", " ", 
+   RowBox[{"FrameLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Voltage\>\"", ",", " ", "\"\<Current\>\""}], "}"}]}], ",", 
+   " ", 
+   RowBox[{"Joined", " ", "\[Rule]", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.696372368046092*^9, 3.696372369511097*^9}, {
+  3.696372414069119*^9, 3.696372433842314*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","prng",
+   "\"Value of option PlotRange -> \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"31\\\", \\\" \\\", \\\"Frame\\\"}], \\\
+\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", FractionBox[RowBox[{\\\"9\\\", \\\" \
+\\\", \\\"Frame\\\"}], \\\"200000000\\\"], \\\"}\\\"}]}], \\\"}\\\"}], \\\"\
+\[Rule]\\\", \\\"True\\\"}]\\) is not All, Full, Automatic, a positive \
+machine number, or an appropriate list of range specifications.\"",2,42,40,
+   29235572700465230594,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696372436960744*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{-0.88, 0.}, {5.87, 1.56*^-8}, {10.9, 2.4*^-8}, {15.87, 
+      3.*^-8}, {20.86, 3.54*^-8}, {25.89, 4.11*^-8}, {30.72, 
+      4.45*^-8}}]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{
+     FormBox["\"Current\"", TraditionalForm], None}, {
+     FormBox["\"Voltage\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-0.88, 30.72}, {0, 4.45*^-8}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.696372436970853*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Fit", "[", 
+   RowBox[{"data8mm", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "x"}], "}"}], ",", " ", "x"}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6963753246430807`*^9, 3.696375380232617*^9}}],
+
+Cell[BoxData[
+ RowBox[{"5.926646056526937`*^-9", "+", 
+  RowBox[{"1.3651330001310204`*^-9", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.696375382259224*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.696372297318858*^9, 3.6963722973301373`*^9}, 
+   3.696372330433057*^9, 3.6963723663818913`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6963753211947927`*^9, 3.6963753216896353`*^9}}]
+},
+WindowSize->{808, 590},
+WindowMargins->{{Automatic, -49}, {Automatic, 28}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1808, 58, 96, "Input"],
+Cell[2391, 82, 970, 30, 113, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3398, 117, 2777, 84, 201, "Input"],
+Cell[6178, 203, 1369, 42, 147, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7584, 250, 1697, 49, 117, "Input"],
+Cell[9284, 301, 766, 24, 79, "Output"]
+}, Open  ]],
+Cell[10065, 328, 92, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[10182, 333, 603, 18, 54, "Input"],
+Cell[10788, 353, 624, 11, 58, "Message"],
+Cell[11415, 366, 1611, 38, 231, "Output"]
+}, Open  ]],
+Cell[13041, 407, 94, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[13160, 412, 783, 21, 54, "Input"],
+Cell[13946, 435, 624, 11, 58, "Message"],
+Cell[14573, 448, 1612, 38, 231, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16222, 491, 212, 5, 32, "Input"],
+Cell[16437, 498, 162, 3, 32, "Output"]
+}, Open  ]],
+Cell[16614, 504, 199, 3, 75, "Input"],
+Cell[CellGroupData[{
+Cell[16838, 511, 769, 21, 54, "Input"],
+Cell[17610, 534, 625, 11, 58, "Message"],
+Cell[18238, 547, 1703, 39, 233, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19978, 591, 784, 21, 54, "Input"],
+Cell[20765, 614, 625, 11, 58, "Message"],
+Cell[21393, 627, 1702, 39, 233, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23132, 671, 261, 6, 32, "Input"],
+Cell[23396, 679, 162, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23595, 687, 847, 22, 96, "Input"],
+Cell[24445, 711, 623, 11, 58, "Message"],
+Cell[25071, 724, 1574, 38, 234, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26682, 767, 782, 21, 54, "Input"],
+Cell[27467, 790, 623, 11, 58, "Message"],
+Cell[28093, 803, 1571, 38, 234, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29701, 846, 264, 7, 54, "Input"],
+Cell[29968, 855, 158, 3, 32, "Output"]
+}, Open  ]],
+Cell[30141, 861, 144, 2, 32, "Input"],
+Cell[30288, 865, 96, 1, 32, "Input"]
+}
+]
+*)
+
